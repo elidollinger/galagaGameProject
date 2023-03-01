@@ -1,7 +1,11 @@
-
-int size = 50;
-
-void drawPlayer()
+class Player
 {
-  circle(width/2,height-size,size);
+
+  int size = 50;
+  
+  void drawPlayer()
+  {
+    circle(width/2,height-size,size);
+  }
+  //asd
 }
