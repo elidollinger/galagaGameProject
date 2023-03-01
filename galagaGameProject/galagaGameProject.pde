@@ -4,12 +4,13 @@
 void setup()
 {
   fullScreen();
-  Player p = new Player();
 }
 
 void draw()
 {
+  Player p = new Player();
+  Stars s = new Stars();
   background(0);
   p.drawPlayer();
-  drawStars();
+  s.drawStars();
 }
