@@ -1,6 +1,6 @@
 // galaga type game
 Stars s;
-
+Enemies [] enemy = new Enemies[15];
 void setup()
 {
   fullScreen();
@@ -13,4 +13,5 @@ void draw()
   background(0);
   p.drawPlayer();
   s.drawStars();
+  Enemies enemy = new Enemies();
 }
