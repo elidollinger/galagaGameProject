@@ -1,23 +1,30 @@
 // galaga type game
-Stars s;
+//Stars s;
 Player p;
 
 void setup()
 {
   fullScreen();
-  s = new Stars();
+  //s = new Stars();
   p = new Player();
 }
 
 void draw()
 {
   background(0);
-  s.drawStars();
+  //s.drawStars();
+  p.movePlayer();
   p.drawPlayer();
 }
 
 void keyPressed()
 {
   if(key == 'a' || key == 'd')
-    p.movePlayer(key, true);
+    p.addThrust(key, true);
+}
+
+void keyReleased()
+{
+  if(key == 'a' || key == 'd')
+    p.addThrust(key,false);
 }

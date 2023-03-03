@@ -17,20 +17,27 @@ class Player
     ellipse(xPos,height-size,size,size);
   }
   
-  public void movePlayer(char pressedKey, boolean active)
+  public void addThrust(char pressedKey, boolean active)
   {
-    if(pressedKey == 'a' && xPos >= size)
+    if(pressedKey == 'a' && xPos >= size && active)
       movingLeft = true;
-    else
-      movingLeft = false;
-    if(pressedKey == 'd' && xPos <= width-size)
+    if(pressedKey == 'd' && xPos <= width-size && active)
       movingRight = true;
-    else
-      movingRight = false;
       
+    if(pressedKey == 'a' && xPos >= size && !active)
+      movingLeft = false;
+    if(pressedKey == 'd' && xPos <= width-size && !active)
+      movingRight = false;
+  }
+  
+  public void movePlayer()
+  {
     if(movingLeft)
-      xPos -= xSpeed;
-    else if(movingRight)
-      xPos += xSpeed;
+       xSpeed -= .5;
+    if(movingRight)
+       xSpeed += .5;
+       
+     xPos += xSpeed;
+
   }
 }
