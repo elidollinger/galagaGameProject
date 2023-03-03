@@ -1,12 +1,17 @@
 class Enemies
 {
+  float xPos;
+  float yPos;
+  
+  public Enemies()
+  {
+   xPos = random(100);
+   yPos = random(100);
+  }
   
   void drawEnemies()
   {
-    rect(50,50,random(100),random(100));
+    rect(xPos,yPos,25,25);
   }
-  void enemyCount()
-  {
-    Enemies e; 
-  }
+ 
 }
