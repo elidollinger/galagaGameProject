@@ -1,19 +1,25 @@
 // galaga type game
-Stars s;
+//Stars s;
 Player p;
+HUD h;
 
 void setup()
 {
   fullScreen();
-  s = new Stars();
+  //s = new Stars();
   p = new Player();
+  h = new HUD();
 }
 
 void draw()
 {
   background(0);
-  s.drawStars();
+  //s.drawStars();
   p.drawPlayer();
+  h.points();
+  h.highScore();
+  h.level();
+  h.lives();
 }
 
 void keyPressed()
