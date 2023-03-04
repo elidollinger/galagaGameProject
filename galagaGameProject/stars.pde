@@ -1,6 +1,6 @@
 class Stars
 {
-  int starCount = 100;
+  int starCount = 200;
   float starPos[][] = new float[2][starCount];
 
   public Stars()

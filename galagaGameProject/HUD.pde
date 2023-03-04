@@ -24,8 +24,8 @@ class HUD
   void lives()
   {
     fill(255);
-    circle(width-1550,height-50,20);
-    circle(width-1600,height-50,20);
-    circle(width-1650,height-50,20);
+    circle(width/12,height-50,20);
+    circle(width/10,height-50,20);
+    circle(width/8.5,height-50,20);
   }
 }
