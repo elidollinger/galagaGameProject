@@ -5,6 +5,12 @@ class Player
   float xPos = width/2;
   boolean movingLeft = false;
   boolean movingRight = false;
+
+  /*void player()
+  {
+
+  }*/
+
   
   void player()
   {
@@ -16,6 +22,7 @@ class Player
     fill(0,255,0);
     ellipse(xPos,height-size,size,size);
   }
+
   
   public void addThrust(char pressedKey, boolean active)
   {
@@ -23,6 +30,12 @@ class Player
       movingLeft = true;
     if(pressedKey == 'd' && xPos <= width-size && active)
       movingRight = true;
+<<<<<<< HEAD
+=======
+    else
+      movingRight = false;
+
+>>>>>>> 7a71a0642bfb25459075630996cfaa9144044bfe
       
     if(pressedKey == 'a' && xPos >= size && !active)
       movingLeft = false;
