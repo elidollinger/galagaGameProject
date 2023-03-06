@@ -1,21 +1,29 @@
 // galaga type game
-
 Stars s;
 Player p;
-HUD h;
 Enemies [] e = new Enemies[15];
+//Enemies e;
 void setup()
 {
   fullScreen();
+  size(800,800);
   s = new Stars();
   p = new Player();
-  h = new HUD();
-  //e = new Enemies();
   for(int i = 0; i < 15; i++)
   {
-    e[i] = new Enemies();
+    e = new Enemies[i];
   }
+  
+//Stars s;
+Player p;
+HUD h;
 
+void setup()
+{
+  fullScreen();
+  //s = new Stars();
+  p = new Player();
+  h = new HUD();
 }
 
 void draw()
@@ -23,11 +31,8 @@ void draw()
   background(0);
   s.drawStars();
   p.drawPlayer();
-  for(int i = 0; i < 15; i++)
-  {
-    e[i].drawEnemies();
-  }
-  s.drawStars();
+  e[i].drawEnemies();
+  //s.drawStars();
   p.drawPlayer();
   h.points();
   h.highScore();
