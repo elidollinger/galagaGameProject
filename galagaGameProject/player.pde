@@ -1,22 +1,11 @@
 class Player
 {
   int size = 50;
-  float xSpeed = 5;
+  float xSpeed = 0;
   float xPos = width/2;
   boolean movingLeft = false;
   boolean movingRight = false;
 
-  /*void player()
-  {
-
-  }*/
-
-  
-  void player()
-  {
-    
-  }
-  
   void drawPlayer()
   {
     fill(0,255,0);
@@ -26,20 +15,13 @@ class Player
   
   public void addThrust(char pressedKey, boolean active)
   {
-    if(pressedKey == 'a' && xPos >= size && active)
+    if(pressedKey == 'a' && active)
       movingLeft = true;
-    if(pressedKey == 'd' && xPos <= width-size && active)
+    if(pressedKey == 'd' && active)
       movingRight = true;
-<<<<<<< HEAD
-=======
-    else
-      movingRight = false;
-
->>>>>>> 7a71a0642bfb25459075630996cfaa9144044bfe
-      
-    if(pressedKey == 'a' && xPos >= size && !active)
+    if(pressedKey == 'a' && !active)
       movingLeft = false;
-    if(pressedKey == 'd' && xPos <= width-size && !active)
+    if(pressedKey == 'd' && !active)
       movingRight = false;
   }
   
@@ -49,8 +31,14 @@ class Player
        xSpeed -= .5;
     if(movingRight)
        xSpeed += .5;
+     
+     if(xPos >= width - (size/2))
+       xSpeed = min(0,-xSpeed);
+     if(xPos <= size/2)
+       xSpeed = max(0,-xSpeed);
+     
+     xSpeed *= 0.95;
        
      xPos += xSpeed;
-
   }
 }

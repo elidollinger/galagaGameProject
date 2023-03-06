@@ -9,7 +9,7 @@ Enemies [] e = new Enemies[15];
 void setup()
 {
   fullScreen();
-  //s = new Stars();
+  s = new Stars();
   s = new Stars();
   p = new Player();
   h = new HUD();
@@ -24,18 +24,11 @@ void setup()
 void draw()
 {
   background(0);
-<<<<<<< HEAD
-  //s.drawStars();
-<<<<<<< HEAD
+  s.drawStars();
   p.movePlayer();
-=======
->>>>>>> 7ae06885e6b37cf31cced7db81cc4c607067cf6b
-=======
   s.drawStars();
   p.drawPlayer();
   //e[i].drawEnemies();
-  s.drawStars();
->>>>>>> 7a71a0642bfb25459075630996cfaa9144044bfe
   p.drawPlayer();
   h.points();
   h.highScore();
