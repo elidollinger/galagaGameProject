@@ -18,5 +18,9 @@ class Enemies
   {
     
   }
+  
+  void enemyLasers()
+  {
+    
+  }
 }
-//a
