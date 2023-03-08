@@ -41,5 +41,7 @@ class Player
        
      xPos += xSpeed;
   }
+  
+  
 }
 //a
