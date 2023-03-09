@@ -1,5 +1,6 @@
 class Enemies
 {
+  //ad
   float xPos;
   float yPos;
   int shotTime  = millis() + 10000 ;
@@ -30,7 +31,7 @@ class Enemies
     yShot = random(height/2);
     if (shotTime >= 10000)
     {
-      
+ 
       shotTime = millis() + 10000;
     }
   }
