@@ -42,9 +42,11 @@ void draw()
   p.drawPlayer();
   for(int i = 0; i < 15; i++)
   {
-    e[i].drawEnemies();
-    e[i].drawLasers();
+  e[i].drawEnemies();
+  e[1].drawLasers();
+  e[14].moveLasers();
   }
+ 
   s.drawStars();
   p.drawPlayer();
   h.points();

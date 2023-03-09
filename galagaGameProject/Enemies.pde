@@ -5,7 +5,7 @@ class Enemies
   float yPos;
   int shotTime  = millis() + 10000 ;
   float yShot;
-  int ySpeed;
+  float ySpeed = 0.5;
   public Enemies()
   {
    xPos = random(width);
@@ -24,15 +24,16 @@ class Enemies
   
   void drawLasers()
   {
-    rect(xPos,yPos,25,50);
+    if (shotTime >= 10000)
+    {
+     rect(xPos,yPos,25,50);
+      shotTime = millis() + 10000;
+    }
   }
   void moveLasers()
   {
+     yPos += ySpeed;
     yShot = random(height/2);
-    if (shotTime >= 10000)
-    {
- 
-      shotTime = millis() + 10000;
-    }
+  
   }
 }
