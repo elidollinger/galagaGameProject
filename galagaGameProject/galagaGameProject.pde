@@ -43,7 +43,7 @@ void draw()
   for(int i = 0; i < 15; i++)
   {
     e[i].drawEnemies();
-    e[i].enemyLasers();
+    e[i].drawLasers();
   }
   s.drawStars();
   p.drawPlayer();
